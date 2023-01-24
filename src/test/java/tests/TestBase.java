@@ -10,7 +10,8 @@ public class TestBase {
     SubmittionPage submittionPage = new SubmittionPage();
 
     @BeforeAll
-    static void beforeEach() {
-        Configuration.browserSize = "1920*1080";
+    public static void beforeAll() {
+
+        Configuration.browserSize = "1920x1080";
     }
 }

@@ -8,34 +8,34 @@ public class ToolsQAWithPageObjectsTest extends TestBase {
     @Test
     void reqistrationFormTest() {
 
-        String userName = "Ivan";
+        TestData data = new TestData();
 
         registrationPage.openPage()
-                .setFirstName(userName)
-                .setLastName("Ivanov")
-                .setUserEmail("IvanovIvan@mail.ru")
-                .setGender("Male")
-                .setPhone("1234567890")
-                .setBirthDate("30", "June", "1990")
-                .setSubject("Accounting")
-                .setSubject("Commerce")
-                .setHobbies("Sports")
+                .setFirstName(data.firstNameData)
+                .setLastName(data.lastNameData)
+                .setUserEmail(data.userEmailData)
+                .setGender(data.genderData)
+                .setPhone(data.phoneData)
+                .setBirthDate(data.birthDayData, data.birthMonthData, data.birthYearData)
+                .setSubject(data.subjectData1)
+                .setHobbies(data.hobbiesData)
                 .setFailLoad("photo_2022-09-18_22-26-00.jpg")
-                .setAdress("Russia, Saint-Petersburg")
-                .setState("Haryana")
-                .setCity("Panipat")
+                .setAdress(data.adressData)
+                .setState(data.stateData)
+                .setCity(data.cityData)
                 .setSubmit();
 
         submittionPage.setSubmitionConfirmation("Thanks for submitting the form")
-                .lineSubmittionConfirmation("Student Name", userName + " Ivanov")
-                .lineSubmittionConfirmation("Student Email", "IvanovIvan@mail.ru")
-                .lineSubmittionConfirmation("Gender", "Male")
-                .lineSubmittionConfirmation("Mobile", "1234567890")
-                .lineSubmittionConfirmation("Date of Birth", "30 June,1990")
-                .lineSubmittionConfirmation("Subjects", "Accounting, Commerce")
-                .lineSubmittionConfirmation("Hobbies", "Sports")
+                .lineSubmittionConfirmation("Student Name", data.firstNameData + " " + data.lastNameData)
+                .lineSubmittionConfirmation("Student Email", data.userEmailData)
+                .lineSubmittionConfirmation("Gender", data.genderData)
+                .lineSubmittionConfirmation("Mobile", data.phoneData)
+                .lineSubmittionConfirmation("Date of Birth", data.birthDayData + " " + data.birthMonthData + "," + data.birthYearData)
+                .lineSubmittionConfirmation("Subjects", data.subjectData1)
+                .lineSubmittionConfirmation("Hobbies", data.hobbiesData)
                 .lineSubmittionConfirmation("Picture", "photo_2022-09-18_22-26-00.jpg")
-                .lineSubmittionConfirmation("Address", "Russia, Saint-Petersburg")
-                .lineSubmittionConfirmation("State and City", "Haryana Panipat");
+                .lineSubmittionConfirmation("Address", data.adressData)
+                .lineSubmittionConfirmation("State and City", data.stateData + " " + data.cityData);
     }
+
 }

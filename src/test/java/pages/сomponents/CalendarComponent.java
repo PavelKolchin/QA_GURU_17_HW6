@@ -9,4 +9,4 @@ public class CalendarComponent {
         $(".react-datepicker__day--0" + day +
                 ":not(.react-datepicker__day--outside-month)").click();
     }
-}
+} //16 June, 1984
