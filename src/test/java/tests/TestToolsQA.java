@@ -36,7 +36,6 @@ public class TestToolsQA {
         $("#subjectsInput").setValue("Accounting").pressEnter();
         $("#subjectsInput").setValue("Commerce").pressEnter();
         $("#hobbiesWrapper").find(byText("Sports")).click();
-//        $("#uploadPicture").uploadFile(new File("src/test/resources/photo_2022-09-18_22-26-00.jpg"));
         $("#uploadPicture").uploadFromClasspath("photo_2022-09-18_22-26-00.jpg");
         $("#currentAddress").setValue("Russia, Saint-Petersburg");
         $("#state").click();
