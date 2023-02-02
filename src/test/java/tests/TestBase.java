@@ -16,6 +16,7 @@ public class TestBase {
     public static void beforeAll() {
 
         Configuration.browserSize = "1920x1080";
+        Configuration.remote = "htps://user1:1234@selenoide.autotest.cloud/wd/hub";
     }
 
     @BeforeEach
