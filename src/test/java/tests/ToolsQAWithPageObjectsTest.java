@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -15,6 +16,7 @@ public class ToolsQAWithPageObjectsTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Demoqa successfull registration test")
     @Test
+    @Tag("remote")
     void reqistrationFormTest() {
 
         TestData data = new TestData();

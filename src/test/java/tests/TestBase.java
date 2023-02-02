@@ -5,8 +5,11 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.RegistrationPage;
 import pages.SubmittionPage;
+
+import java.util.Map;
 
 public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
@@ -16,7 +19,17 @@ public class TestBase {
     public static void beforeAll() {
 
         Configuration.browserSize = "1920x1080";
+        Configuration.browser = "chrome";
+        Configuration.browserVersion = "100.0";
         Configuration.remote = "htps://user1:1234@selenoide.autotest.cloud/wd/hub";
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
