@@ -60,9 +60,6 @@ public class ToolsQAWithPageObjectsTest extends TestBase {
         step("Выбираем город пользователя", () -> {
             registrationPage.setCity(data.cityData);
         });
-        step("Source", () -> {
-            registrationPage.source();
-        });
         step("Нажимаем Submit", () -> {
             registrationPage.setSubmit();
         });
@@ -99,9 +96,6 @@ public class ToolsQAWithPageObjectsTest extends TestBase {
         });
         step("Подтверждаем, что оттображенные штат и город соответствуют выбранным", () -> {
             submittionPage.lineSubmittionConfirmation("State and City", data.stateData + " " + data.cityData);
-        });
-        step("Делаем Screenshot", () -> {
-            submittionPage.takeScreenshot();
         });
     }
 

@@ -112,9 +112,4 @@ public class RegistrationPage {
     public void setSubmit() {
         userSubmit.click();
     }
-
-    @Attachment
-    public void source() {
-        attachment("Source", webdriver().driver().source());
-    }
 }
