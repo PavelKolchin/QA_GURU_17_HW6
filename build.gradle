@@ -36,8 +36,8 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
     systemProperties(System.getProperties())
+    useJUnitPlatform()
 }
 
 task simple_test(type: Test) {
