@@ -1,11 +1,10 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Attachment;
 import pages.сomponents.CalendarComponent;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static io.qameta.allure.Allure.attachment;
 
 public class RegistrationPage {
     CalendarComponent calendarComponent = new CalendarComponent();
@@ -72,7 +71,8 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setSubject(String value) {
-        userSubject.setValue(value).submit();
+        userSubject.click();
+        userSubject.setValue(value).pressEnter();
 
         return this;
     }

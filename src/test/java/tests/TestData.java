@@ -15,8 +15,7 @@ public class TestData {
             birthDayData = String.format("%02d", faker.number().numberBetween(1, 28)),
             birthMonthData = faker.options().option("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"),
             birthYearData = faker.number().numberBetween(1900, 2022) + "",
-            subjectData1 = faker.options().option("Chemistry", "Computer Science", "Commerce", "Accounting" +
-                    "Economics", "Social Studies", "Civics", "English", "Arts", "History", "Maths", "Phisics", "Biology", "Hindi"),
+            subjectData1 = faker.options().option("Chemistry", "Computer Science", "Commerce", "Accounting", "Economics", "Social Studies", "Civics", "English", "Arts", "History", "Maths", "Phisics", "Biology", "Hindi"),
             hobbiesData = faker.options().option("Sports", "Reading", "Music"),
             adressData = faker.address().streetAddress(),
             stateData = faker.options().option("NCR", "Uttar Pradesh", "Haryana", "Rajasthan"),

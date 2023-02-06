@@ -20,8 +20,8 @@ public class TestBase {
     @BeforeAll
     public static void beforeAll() {
 
-        Configuration.browserSize = System.getProperty("size"); //, "1920x1080"
-        Configuration.browser = System.getProperty("browser");//, "chrome"
+        Configuration.browserSize = System.getProperty("size");
+        Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("b_vertion");//, "100.0"
         Configuration.remote = System.getProperty("remote");//, "https://user1:1234@selenoid.autotests.cloud/wd/hub"
 
