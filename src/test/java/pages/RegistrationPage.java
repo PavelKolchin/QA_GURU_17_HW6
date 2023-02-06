@@ -72,7 +72,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setSubject(String value) {
-        userSubject.setValue(value).pressEnter();
+        userSubject.setValue(value).submit();
 
         return this;
     }
