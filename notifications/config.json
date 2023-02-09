@@ -6,7 +6,7 @@
     "comment": "any comment here, zibly1984@gmail.com",
     "reportLink": "https://jenkins.autotests.cloud",
     "language": "ru",
-    "allureFolder": "build/reports/allure-report/allureReport/widgets/",
+    "allureFolder": "allure-report/",
     "enableChart": true
   },
   "telegram": {
